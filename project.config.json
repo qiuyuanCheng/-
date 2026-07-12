@@ -1,0 +1,46 @@
+{
+  "description": "Ball Duel WeChat Mini Game",
+  "compileType": "game",
+  "projectname": "球球乱斗",
+  "appid": "wxfedca972400cce02",
+  "cloudfunctionRoot": "cloudfunctions/",
+  "libVersion": "3.16.1",
+  "setting": {
+    "urlCheck": true,
+    "es6": true,
+    "enhance": true,
+    "minified": true,
+    "uploadWithSourceMap": true
+  },
+  "packOptions": {
+    "ignore": [
+      {
+        "type": "folder",
+        "value": "miniprogram"
+      },
+      {
+        "type": "folder",
+        "value": "cloudfunctions"
+      },
+      {
+        "type": "folder",
+        "value": "tests"
+      },
+      {
+        "type": "folder",
+        "value": "tools"
+      },
+      {
+        "type": "folder",
+        "value": ".agents"
+      },
+      {
+        "type": "file",
+        "value": "project.miniprogram.config.json"
+      }
+    ],
+    "include": []
+  },
+  "condition": {},
+  "simulatorPluginLibVersion": {}
+}

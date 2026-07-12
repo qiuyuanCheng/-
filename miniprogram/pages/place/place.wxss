@@ -1,0 +1,22 @@
+.place {
+  min-height: 100vh;
+  background: #081116;
+}
+.place-canvas {
+  width: 100vw;
+  height: 84vh;
+  display: block;
+}
+.place-bar {
+  height: 16vh;
+  box-sizing: border-box;
+  padding: 16rpx 22rpx;
+  display: flex;
+  align-items: center;
+  gap: 14rpx;
+  justify-content: space-between;
+  background: #101820;
+}
+.place-bar .muted {
+  flex: 1;
+}

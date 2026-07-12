@@ -1,0 +1,46 @@
+<view class="page result">
+  <view class="title">{{summary.winner}}</view>
+
+  <view class="panel hero">
+    <view class="hero-main">MVP {{summary.mvpName}}</view>
+    <view class="muted">这局打出了 {{summary.totalDamage}} 点总伤害，最高单次 {{summary.highestSingle}} 点。</view>
+  </view>
+
+  <view class="panel report-grid">
+    <view>
+      <view class="label">最高连击</view>
+      <view class="value">{{summary.highestCombo}}</view>
+    </view>
+    <view>
+      <view class="label">战斗时长</view>
+      <view class="value">{{summary.duration}}s</view>
+    </view>
+    <view>
+      <view class="label">胜方剩余 HP</view>
+      <view class="value">{{summary.winnerHp}}</view>
+    </view>
+    <view>
+      <view class="label">地图</view>
+      <view class="value">{{summary.mapLabel}}</view>
+    </view>
+  </view>
+
+  <view wx:if="{{summary.loserBestName}}" class="panel">
+    <view class="row-title">败方最佳</view>
+    <view class="muted">{{summary.loserBestName}} 输出 {{summary.loserBestDamage}} 点，虽败但打出了很高压力。</view>
+  </view>
+
+  <view class="panel">
+    <view class="row-title">最后一击</view>
+    <view class="muted">{{summary.finalHitText}}</view>
+  </view>
+
+  <view class="panel" wx:for="{{rows}}" wx:key="slotId">
+    <view class="row-title">{{item.slotId}} {{item.name}} / {{item.teamId}} 队</view>
+    <view class="muted">剩余 HP {{item.hp}} / 输出 {{item.damageDone}} / 承伤 {{item.damageTaken}} / 命中 {{item.hits}}</view>
+    <view class="muted">主要伤害来源：{{item.mainDamageSource}}</view>
+  </view>
+
+  <button class="primary" bindtap="again">再来一局</button>
+  <button class="secondary" bindtap="home">返回首页</button>
+</view>

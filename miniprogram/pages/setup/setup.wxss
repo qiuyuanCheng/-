@@ -1,0 +1,74 @@
+picker {
+  padding: 20rpx 0;
+  color: #19c2b1;
+}
+input {
+  width: 150rpx;
+  padding: 12rpx;
+  background: #0d171d;
+  color: #f4f7fb;
+  border-radius: 6rpx;
+}
+.slot-head {
+  font-size: 28rpx;
+  font-weight: 800;
+}
+.selected-brief {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8rpx;
+  margin: 10rpx 0 14rpx;
+  color: #9eb3bf;
+  font-size: 20rpx;
+}
+.selected-brief text {
+  padding: 4rpx 10rpx;
+  border-radius: 6rpx;
+  background: rgba(25, 194, 177, 0.12);
+}
+.ball-scroll {
+  width: 100%;
+  white-space: nowrap;
+}
+.ball-row {
+  display: inline-flex;
+  gap: 14rpx;
+}
+.ball-card {
+  width: 320rpx;
+  min-height: 210rpx;
+  box-sizing: border-box;
+  padding: 14rpx;
+  border: 1rpx solid rgba(148, 190, 204, 0.26);
+  border-radius: 8rpx;
+  background: #0d171d;
+  white-space: normal;
+}
+.ball-card.active {
+  border-color: #19c2b1;
+  box-shadow: 0 0 18rpx rgba(25, 194, 177, 0.25);
+}
+.ball-name {
+  color: #ffffff;
+  font-weight: 900;
+  font-size: 25rpx;
+}
+.ball-tags {
+  margin-top: 6rpx;
+  color: #19c2b1;
+  font-size: 20rpx;
+}
+.ball-desc,
+.ball-good,
+.ball-bad {
+  margin-top: 6rpx;
+  color: #9eb3bf;
+  font-size: 19rpx;
+  line-height: 1.35;
+}
+.ball-good {
+  color: #d8fff9;
+}
+.ball-bad {
+  color: #ffd7df;
+}

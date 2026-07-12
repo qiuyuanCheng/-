@@ -1,0 +1,17 @@
+<view class="page">
+  <view class="title">好友挑战</view>
+  <view class="panel">
+    <view>房间：{{roomId}}</view>
+    <view class="muted">状态：{{statusText}}</view>
+    <view class="muted">你正在配置：{{roleText}}</view>
+  </view>
+  <view class="panel">
+    <view>选球：A {{ownerSelected ? '已完成' : '未完成'}} / B {{guestSelected ? '已完成' : '未完成'}}</view>
+    <view>布阵：A {{ownerPlaced ? '已完成' : '未完成'}} / B {{guestPlaced ? '已完成' : '未完成'}}</view>
+  </view>
+  <button class="primary" open-type="share">邀请好友</button>
+  <button class="secondary" bindtap="join">加入房间</button>
+  <button class="secondary" bindtap="selectBalls" disabled="{{!canSelect}}">1. 选择我的小球</button>
+  <button class="secondary" bindtap="configure" disabled="{{!canPlace}}">2. 布置位置和方向</button>
+  <button class="primary" bindtap="ready" disabled="{{!canReady}}">3. 准备并开战</button>
+</view>

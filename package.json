@@ -1,0 +1,15 @@
+{
+  "name": "ball-duel-miniprogram",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Ball Duel miniprogram and web edition",
+  "workspaces": [
+    "web"
+  ],
+  "scripts": {
+    "test": "node tests/simulation.test.js",
+    "build": "npm run build --workspace ball-duel-web",
+    "dev:web": "npm run dev --workspace ball-duel-web"
+  },
+  "devDependencies": {}
+}

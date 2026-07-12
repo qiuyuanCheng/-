@@ -1,0 +1,29 @@
+﻿{
+    "description":  "Ball Duel WeChat Mini Game",
+    "compileType":  "game",
+    "projectname":  "BallDuelWechatGame",
+    "cloudfunctionRoot":  "cloudfunctions/",
+    "setting":  {
+                    "urlCheck":  true,
+                    "es6":  true,
+                    "enhance":  true,
+                    "minified":  true,
+                    "uploadWithSourceMap":  true
+                },
+    "condition":  {
+
+                  },
+    "libVersion":  "3.16.1",
+    "packOptions":  {
+                        "ignore":  [
+                                       {
+                                           "type":  "folder",
+                                           "value":  "cloudfunctions"
+                                       }
+                                   ],
+                        "include":  [
+
+                                    ]
+                    },
+    "appid":  "wxfedca972400cce02"
+}

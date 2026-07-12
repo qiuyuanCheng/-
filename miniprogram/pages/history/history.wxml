@@ -1,0 +1,8 @@
+<view class="page">
+  <view class="title">历史战绩</view>
+  <view wx:if="{{!items.length}}" class="panel muted">暂无战绩</view>
+  <view class="panel" wx:for="{{items}}" wx:key="_id">
+    <view>胜者：{{item.winnerTeam}} / {{item.duration}}s</view>
+    <view class="muted">{{item.mode}} · {{item.map}} · {{item.createdAtText}}</view>
+  </view>
+</view>

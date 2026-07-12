@@ -1,0 +1,14 @@
+button {
+  margin: 18rpx 0;
+}
+picker {
+  padding: 20rpx 0;
+  color: #19c2b1;
+}
+input {
+  width: 150rpx;
+  padding: 12rpx;
+  background: #0d171d;
+  color: #f4f7fb;
+  border-radius: 6rpx;
+}

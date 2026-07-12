@@ -1,0 +1,8 @@
+<view class="place">
+  <canvas type="2d" id="placeCanvas" class="place-canvas" bindtouchstart="touchStart" bindtouchmove="touchMove" bindtouchend="touchEnd"></canvas>
+  <view class="place-bar">
+    <view class="muted">{{hint}}</view>
+    <button size="mini" class="secondary" bindtap="reset">重置</button>
+    <button size="mini" class="primary" bindtap="startBattle">开始</button>
+  </view>
+</view>

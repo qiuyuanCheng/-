@@ -1,0 +1,49 @@
+<view class="battle">
+  <view class="top-hud">
+    <view class="fighter {{item.teamId === 'A' ? 'team-a' : item.teamId === 'B' ? 'team-b' : 'team-other'}} {{item.alive ? '' : 'dead'}}" wx:for="{{fighters}}" wx:key="slotId">
+      <view class="fighter-main">
+        <text class="slot">{{item.slotId}}</text>
+        <text class="name">{{item.name}}</text>
+        <text class="hp-text">{{item.hp}}</text>
+      </view>
+      <view class="hpbar"><view class="hpfill" style="width: {{item.hpWidth}};"></view></view>
+      <view class="badges">
+        <text wx:for="{{item.statuses}}" wx:key="*this">{{item}}</text>
+      </view>
+    </view>
+  </view>
+
+  <view class="arena-wrap">
+    <canvas type="2d" id="arena" class="arena"></canvas>
+    <view wx:if="{{debugOpen}}" class="debug-panel">{{debugText}}</view>
+    <view wx:if="{{vsVisible}}" class="vs-mask">
+      <view class="vs-row">
+        <view class="vs-team" wx:for="{{vsTeams}}" wx:key="teamId" style="border-color: {{item.color}};">
+          <view class="vs-name" style="color: {{item.color}};">{{item.title}}</view>
+          <view class="vs-balls">{{item.names}}</view>
+          <view class="vs-role">{{item.role}}</view>
+        </view>
+      </view>
+      <view class="vs-text">VS</view>
+    </view>
+    <view wx:if="{{showVictory}}" class="victory-mask">
+      <view class="victory-card">{{victoryText}}</view>
+    </view>
+  </view>
+
+  <view class="hud">
+    <view class="timebox">
+      <text class="time">{{time}}s</text>
+      <view class="event-list">
+        <text class="event event-{{index}}" wx:for="{{recentEvents}}" wx:key="*this">{{item}}</text>
+      </view>
+    </view>
+    <view class="actions">
+      <button size="mini" bindtap="toggleAudio">{{audioEnabled ? '音效开' : '音效关'}}</button>
+      <button size="mini" bindtap="cycleVolume">音量{{volumeLabel}}</button>
+      <button size="mini" bindtap="toggleDebug">调试</button>
+      <button size="mini" bindtap="togglePause">{{paused ? '继续' : '暂停'}}</button>
+      <button size="mini" bindtap="speedUp">x{{speed}}</button>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,20 @@
+{
+    "pages":  [
+                  "pages/home/home",
+                  "pages/showcase/showcase",
+                  "pages/setup/setup",
+                  "pages/place/place",
+                  "pages/battle/battle",
+                  "pages/result/result",
+                  "pages/history/history",
+                  "pages/room/room"
+              ],
+    "window":  {
+                   "navigationBarTitleText":  "球球对决",
+                   "navigationBarBackgroundColor":  "#101820",
+                   "navigationBarTextStyle":  "white",
+                   "backgroundColor":  "#101820"
+               },
+    "style":  "v2",
+    "sitemapLocation":  "sitemap.json"
+}

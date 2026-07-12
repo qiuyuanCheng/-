@@ -1,0 +1,26 @@
+﻿<view class="page showcase">
+  <view class="title">小球图鉴</view>
+  <view class="muted">这里展示 24 个球的生命值、攻击机制和伤害数值。</view>
+  <view class="grid">
+    <view class="ball-card" wx:for="{{balls}}" wx:key="id">
+      <image wx:if="{{item.guideImage}}" class="sprite-img" src="{{item.guideImage}}" mode="aspectFit"></image>
+      <view wx:else class="sprite-img sprite-fallback {{item.fallbackClass}}">
+        <view class="fallback-ball"></view>
+      </view>
+      <view class="info">
+        <view class="name">{{item.name}}</view>
+        <view class="tags">
+          <text class="tag" wx:for="{{item.tags}}" wx:for-item="tag" wx:key="*this">{{tag}}</text>
+        </view>
+        <view class="stat-line">{{item.hpLabel}}</view>
+        <view class="desc role">{{item.playStyleLabel}}</view>
+        <view class="desc">{{item.strengthLabel}}</view>
+        <view class="desc weak">{{item.weaknessLabel}}</view>
+        <view class="desc">{{item.attackLabel}}</view>
+        <view class="desc damage">{{item.damageLabel}}</view>
+        <view wx:if="{{item.critLabel}}" class="desc crit">{{item.critLabel}}</view>
+        <button size="mini" class="sfx-btn" data-id="{{item.id}}" bindtap="previewSfx">试听音效</button>
+      </view>
+    </view>
+  </view>
+</view>

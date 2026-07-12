@@ -1,0 +1,39 @@
+<view class="page">
+  <view class="title">{{title}}</view>
+  <view class="panel" wx:if="{{mode !== 'roomSelect'}}">
+    <view class="muted">模式</view>
+    <picker mode="selector" range="{{modeNames}}" value="{{modeIndex}}" bindchange="changeMode">
+      <view>{{currentModeName}}</view>
+    </picker>
+  </view>
+  <view class="panel" wx:if="{{mode !== 'roomSelect'}}">
+    <view class="muted">地图</view>
+    <picker mode="selector" range="{{mapNames}}" value="{{mapIndex}}" bindchange="changeMap">
+      <view>{{currentMapName}}</view>
+    </picker>
+  </view>
+  <view class="panel" wx:if="{{mode === 'roomSelect'}}">
+    <view class="muted">房间地图</view>
+    <view>{{currentModeName}} / {{currentMapName}}</view>
+  </view>
+  <view class="panel" wx:for="{{slots}}" wx:key="slotId">
+    <view class="slot-head">{{item.slotId}} / {{item.teamId}}：{{item.ballName}}</view>
+    <view class="selected-brief">
+      <text>{{item.ballGuide.roleTag}}</text>
+      <text>{{item.ballGuide.skillTag}}</text>
+      <text>{{item.ballGuide.attackBrief}}</text>
+    </view>
+    <scroll-view class="ball-scroll" scroll-x="true">
+      <view class="ball-row">
+        <view class="ball-card {{item.ballId === ball.id ? 'active' : ''}}" wx:for="{{ballCards}}" wx:for-item="ball" wx:key="id" data-slot="{{index}}" data-ball="{{ballIndex}}" wx:for-index="ballIndex" bindtap="chooseBall">
+          <view class="ball-name">{{ball.name}}</view>
+          <view class="ball-tags">{{ball.roleTag}} / {{ball.skillTag}}</view>
+          <view class="ball-desc">{{ball.attackBrief}}</view>
+          <view class="ball-good">优点：{{ball.strength}}</view>
+          <view class="ball-bad">弱点：{{ball.weakness}}</view>
+        </view>
+      </view>
+    </scroll-view>
+  </view>
+  <button class="primary" bindtap="start">{{startText}}</button>
+</view>

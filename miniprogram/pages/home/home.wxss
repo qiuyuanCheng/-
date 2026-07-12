@@ -1,0 +1,32 @@
+.home button {
+  margin: 18rpx 0;
+}
+.guide-mask {
+  position: fixed;
+  inset: 0;
+  z-index: 20;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 36rpx;
+  background: rgba(0, 0, 0, 0.58);
+}
+.guide-card {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 28rpx;
+  border-radius: 8px;
+  background: #12212a;
+  border: 1rpx solid rgba(216, 255, 249, 0.32);
+}
+.guide-title {
+  font-size: 34rpx;
+  font-weight: 900;
+  margin-bottom: 16rpx;
+}
+.guide-line {
+  color: #c6d6de;
+  font-size: 24rpx;
+  line-height: 1.55;
+  margin: 10rpx 0;
+}

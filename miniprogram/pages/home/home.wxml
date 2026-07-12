@@ -1,0 +1,26 @@
+<view class="page home">
+  <view class="title">球球对决</view>
+  <view class="muted">自动武器小球对战模拟</view>
+  <view class="panel">
+    <button class="primary" bindtap="startFree">开始对战</button>
+    <button class="secondary" bindtap="showGuide">新手教程 / 玩法说明</button>
+    <button class="secondary" bindtap="showcase">小球图鉴</button>
+    <button class="secondary" bindtap="friendRoom">好友挑战</button>
+    <button class="secondary" bindtap="history">历史战绩</button>
+  </view>
+  <view class="panel">
+    <view>登录状态：{{user ? '已登录' : '未登录'}}</view>
+    <button class="secondary" bindtap="login">微信云开发登录</button>
+  </view>
+  <view wx:if="{{guideOpen}}" class="guide-mask" bindtap="hideGuide">
+    <view class="guide-card" catchtap="noop">
+      <view class="guide-title">新手玩法</view>
+      <view class="guide-line">1. 先选小球，每个球都有不同武器和定位。</view>
+      <view class="guide-line">2. 进入布阵页后，点地图放置小球。</view>
+      <view class="guide-line">3. 拖拽自己的小球，设置初速度方向和力度。</view>
+      <view class="guide-line">4. 战斗会自动进行，观察武器命中、走位和克制关系。</view>
+      <view class="guide-line">5. 联机中，对方球种和速度方向在开战前会隐藏。</view>
+      <button class="primary" bindtap="hideGuide">知道了</button>
+    </view>
+  </view>
+</view>
